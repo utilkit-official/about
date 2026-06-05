@@ -14,5 +14,5 @@ jobs:
       - name: indexnow-action
         uses: bojieyang/indexnow-action@v3
         with:
-          sitemap-location: 'https://utilkit.com/sitemap.xml.gz'
+          sitemap-location: 'https://utilkit.com/sitemap.xml'
           key: ${{ secrets.INDEXNOW_KEY }}
