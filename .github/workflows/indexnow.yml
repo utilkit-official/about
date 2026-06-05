@@ -1,0 +1,17 @@
+# This is a basic workflow to help you get started with Actions
+
+name: 'IndexNow'
+on:
+  schedule:
+    # Set the schedule time
+    - cron: '0 2 * * *'
+
+jobs:
+  check-and-submit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: indexnow-action
+        uses: bojieyang/indexnow-action@v3
+        with:
+          sitemap-location: 'https://utilkit.com/sitemap.xml.gz'
+          key: ${{ secrets.INDEXNOW_KEY }}
